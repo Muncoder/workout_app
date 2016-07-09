@@ -1,0 +1,26 @@
+<h1>New Exercises for <%= current_user.full_name %></h1>
+
+<%= form_for [current_user, @exercise] do |f| %>
+	<div id="form-group">
+		<%= f.label :duration_in_min, "Duration" %>
+		<%= f.text_field :duration_in_min, class: "form-control" %>
+	</div>
+
+	<div id="form-group">
+		<%= f.label :workout, "Workout Details" %>
+		<%= f.text_area :workout, class: "form-control" %>
+	</div>
+
+	<div id="form-group">
+		<%= f.label :workout_date, "Activity Date" %>
+		<%= f.text_field :workout_date, class: "form-control" %>
+	</div>
+<br>
+
+	<%= f.submit "Create Exercise", class: "btn btn-info" %>
+
+<% end %>
+
+<br>
+<br>
+<%= link_to "Back", user_exercises_path(current_user), class: "btn btn-default" %>

@@ -9,16 +9,19 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 4.2'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.5', '>= 3.5.1'
-
+	gem 'guard-rspec', require: false
+	gem 'spring-commands-rspec'
 	gem 'byebug'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-
+	
   gem 'spring'
 end
 
